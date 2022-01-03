@@ -1,0 +1,29 @@
+[Unit]
+Description=Translation server and API for Apertium
+Documentation=http://wiki.apertium.org/wiki/Apertium-apy
+After=network.target
+
+[Service]
+# Change this to your username and edit to how you start apy:
+User=apertium
+WorkingDirectory=/usr/share/apertium-apy
+ExecStart=/usr/bin/python3 servlet.py /usr/share/apertium/modes
+
+# Increase the ulimit -n from the default 1024 – you may get the error
+# "Too many open files" with a lot of pipelines open.
+# Note that LimitNOFILE may be capped by systemd.
+# Try `systemctl show|grep NOFILE` and see files
+# /etc/systemd/system.conf and /etc/systemd/user.conf
+LimitNOFILE=32768
+
+# By default, if it restarts >10 times within 5 secs, it marks it as failed and gives up:
+Restart=always
+
+# Restart the service if it doesn't do a watchdog ping within 10 seconds:
+WatchdogSec=10s
+
+# No reason to have access to shared tmp files:
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

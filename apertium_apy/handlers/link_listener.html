@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    function interceptClickEvent(e) {
+        window.parent.fromIframe(e);
+        if (window.parent.followLinks()) {
+            window.parent.fromIframeMouseClick(e);
+            e.preventDefault();
+        }
+    }
+
+    function interceptMouseoverEvent(e) {
+        window.parent.fromIframeMouseover(e);
+    }
+
+    function interceptMouseoutEvent(e) {
+        window.parent.fromIframeMouseout(e);
+    }
+
+    //listen for link click events at the document level
+    function initLinks() {
+        // alert("initLinks start");
+        if (document.addEventListener) {
+            document.addEventListener('click', interceptClickEvent);
+            document.addEventListener("mouseover", interceptMouseoverEvent);
+            document.addEventListener("mouseout", interceptMouseoutEvent);
+        } else if (document.attachEvent) {
+            document.attachEvent('onclick', interceptClickEvent);
+            document.addEventListener("onmouseover", interceptMouseoverEvent);
+            document.addEventListener("onmouseout", interceptMouseoutEvent);
+        }
+    }
+    initLinks();
+</script>

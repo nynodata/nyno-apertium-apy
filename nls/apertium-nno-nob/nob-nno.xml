@@ -1,0 +1,26 @@
+<preferences>
+<preference id="ggj_gg">
+    <description lang="nno">byggje &#x2192; bygge</description>
+  </preference><preference id="kj_k">
+    <description lang="nno">s&#xF8;kje &#x2192; s&#xF8;ke</description>
+  </preference><preference id="de_dokker">
+    <description lang="nno">de &#x2192; dokker</description>
+  </preference><preference id="medan_mens">
+    <description lang="nno">medan &#x2192; mens</description>
+  </preference><preference id="infa_infe">
+    <description lang="nno">a-infinitiv &#x2192; e-infinitiv</description>
+    <description lang="nob">infinitiv med a &#x2192; infinitiv med e</description>
+  </preference><preference id="me_vi">
+    <description lang="nno">me &#x2192; vi</description>
+  </preference><preference id="forskjell_skilnad">
+    <description lang="nno">forskjell &#x2192; skilnad</description>
+    <description lang="nob">forskjell &#x2192; skilnad</description>
+  </preference><preference id="samd_einig">
+    <description lang="nno">samd &#x2192; einig</description>
+  </preference><preference id="anten_enten">
+    <description lang="nno">anten &#x2192; enten</description>
+  </preference><preference id="mellom_blant">
+    <description lang="nno">mellom &#x2192; blant</description>
+  </preference><preference id="lova_loven">
+    <description lang="nno">lova &#x2192; loven</description>
+  </preference></preferences>
